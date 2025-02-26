@@ -1,3 +1,4 @@
+from pluggy import HookCallError
 from selenium.webdriver.common.by import By
 
 class HomePageLocators:
@@ -50,17 +51,5 @@ class HomePageLocators:
     def __init__(self,driver):
         self.driver = driver
 
-    def abtest_locator(self):
-        return self.driver.find_element(*HomePageLocators.var_abtest_locator)
-
-    def add_remove_locator(self):
-        return self.driver.find_element(*HomePageLocators.var_add_remove_elements_locator)
-
-    def basic_auth_locator(self):
-        return self.driver.find_element(*HomePageLocators.var_basic_auth_locator)
-
-    def broken_image_locator(self):
-        return self.driver.find_element(*HomePageLocators.var_broken_images_locator)
-
-    def challenging_dom_locator(self):
-        return self.driver.find_element(*HomePageLocators.var_challenging_dom_locator)
+    def click_example(self,cl,var):
+        return self.driver.find_element(cl,var).click()

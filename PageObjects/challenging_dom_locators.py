@@ -22,11 +22,12 @@ class ChallengingDom:
         return len(self.driver.find_elements(*ChallengingDom.var_row_locator))
 
     def column_header(self,c_index):
-        return self.driver.find_element(By.XPATH,f"//table/thead/tr/th[{c_index}]").text
+        column_header = self.driver.find_element(By.XPATH,f"//table/thead/tr/th[{c_index}]").text
+        return column_header
 
-    def row_data(self,c_index,r_index):
-        return self.driver.find_element(By.XPATH,f"//tbody/tr[{c_index}]/td[{r_index}]").text
-
+    def row_data(self,r_index,c_index):
+        row_data = self.driver.find_element(By.XPATH,f"//tbody/tr[{r_index}]/td[{c_index}]").text
+        return row_data
 
 
 

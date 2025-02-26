@@ -8,7 +8,8 @@ class TestMain(IntDriver):
 
     def test_broken_image_page(self):
         HomePage_elements = HomePageLocators(self.driver)
-        HomePage_elements.broken_image_locator().click()
+        HomePage_elements.click_example(*HomePageLocators.var_broken_images_locator)
+
 
     def test_img_check(self):
         broken_image_element = broken_image(self.driver)

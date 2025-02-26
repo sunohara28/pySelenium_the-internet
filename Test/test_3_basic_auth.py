@@ -9,10 +9,7 @@ class TestMain(IntDriver):
     def test_basic_auth_page(self):
         HomePage_elements = HomePageLocators(self.driver)
 
-        HomePage_elements.basic_auth_locator().click()
-
-        time.sleep(2)
-
+        HomePage_elements.click_example(*HomePageLocators.var_basic_auth_locator)
     def test_pop_up_login(self):
         basic_auth_element = Basic_Auth_Locators(self.driver)
 

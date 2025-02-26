@@ -6,7 +6,8 @@ class TestMain(IntDriver):
 
     def test_add_page(self):
         HomePage_elements = HomePageLocators(self.driver)
-        HomePage_elements.add_remove_locator().click()
+        HomePage_elements.click_example(*HomePageLocators.var_add_remove_elements_locator)
+
 
     def test_add(self):
 
