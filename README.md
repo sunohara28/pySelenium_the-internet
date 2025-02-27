@@ -1,4 +1,5 @@
-this project consist different selenium chcuchu using python
+This project consist different selenium chcuchu using python
+*Thread Sleep might be found to see how automation happen.
 
 **Available Examples**
 A/B Testing
